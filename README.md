@@ -18,20 +18,22 @@ root/
 │   │   └── (other files related to the logging service) 
 │   ├── shared/ # Shared services used across experiments 
 │   │   ├── docker-compose.yml 
-│ │ ├── .env # Environment variables for shared services 
-│ │ ├── README.md # Documentation for shared services 
-│ │ └── (other files related to shared services) 
-│ │ │ └── (other services)
-│ └── experiments/ 
-├── experiment_1/ # First experiment 
-│ ├── docker-compose.yml │ ├── .env # Environment variables for this experiment 
-│ ├── README.md # Documentation for experiment 1 
-│ └── (other files related to experiment 1) 
-│ ├── experiment_2/ # Second experiment 
-│ ├── docker-compose.yml │ ├── .env # Environment variables for this experiment 
-│ ├── README.md # Documentation for experiment 2 
-│ └── (other files related to experiment 2) 
-│ └── (other experiments)
+│   │   ├── .env # Environment variables for shared services 
+│   │   ├── README.md # Documentation for shared services 
+│   │   └── (other files related to shared services) 
+│   └── (other services)
+└── experiments/ 
+│   ├── experiment_1/ # First experiment 
+│   │   ├── docker-compose.yml 
+│   │   ├── .env # Environment variables for this experiment 
+│   │   ├── README.md # Documentation for experiment 1 
+│   │   └── (other files related to experiment 1) 
+│   ├── experiment_2/ # Second experiment 
+│   │   ├── docker-compose.yml 
+│   │   ├── .env # Environment variables for this experiment 
+│   │   ├── README.md # Documentation for experiment 2 
+│   │   └── (other files related to experiment 2) 
+│   └── (other experiments)
 
 ## Services Directory
 
