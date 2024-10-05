@@ -62,7 +62,7 @@ This document provides instructions on setting up the root Git repository and in
 9. **Push Your Changes to GitHub**: Push your local commits to the remote repository:
 
     ```bash
-    git push -u origin master
+    git push -u origin main
     ```
 
 ## Setting Up Child Git Repositories
@@ -99,7 +99,7 @@ This document provides instructions on setting up the root Git repository and in
 6. **Push Changes to GitHub**: Push your changes to the GitHub repository:
 
     ```bash
-    git push -u origin master
+    git push -u origin main
     ```
 
 7. **Repeat for Other Services**: Repeat steps 1-6 for each additional service (e.g., `logging`, `shared`).
