@@ -64,7 +64,7 @@ chmod +x run.sh
 
 You can connect to services using different connection strings depending on your environment.
 
-Container in the Same Docker Network: use the service's container name and network alias in the connection string.
+Container in the Same Docker Network: use the **service's container name** and network alias in the connection string. E.g. `experiments-postgres`
 
 ```bash
 postgresql://username:password@experiments-postgres:5432/dbname
