@@ -13,31 +13,22 @@ This folder contains a collection of services and experiments organized to facil
 root/ 
 - init.sh # Create common things e.g. the experiments network - run once when you begin - remember to chmod +x it
 ├── services/ 
-│   ├── database/ # Database service (e.g., PostgreSQL) 
-│   │   ├── docker-compose.yml │ │ ├── .env # Environment variables for the database 
-│   │   ├── README.md # Documentation for the database service 
+│   ├── database-postgresql/ # Database service (e.g., PostgreSQL) see https://github.com/plindman/experiments-database-postgresql
+│   │   ├── README.md # Documentation
+│   │   ├── run.sh # Script to run the service
 │   │   └── (other files related to the database service) 
-│   ├── logging/ # Logging service (e.g., ELK stack) 
-│   │   ├── docker-compose.yml 
-│   │   ├── .env # Environment variables for the logging service 
-│   │   ├── README.md # Documentation for the logging service 
+│   ├── reporting-superset/ # Data and visualization (e.g., Apache Superset) see https://github.com/plindman/experiments-apache-superset
+│   │   ├── README.md # Documentation 
+│   │   ├── run.sh # Script to run the service
 │   │   └── (other files related to the logging service) 
-│   ├── shared/ # Shared services used across experiments 
-│   │   ├── docker-compose.yml 
-│   │   ├── .env # Environment variables for shared services 
-│   │   ├── README.md # Documentation for shared services 
-│   │   └── (other files related to shared services) 
-│   └── (other services)
 └── experiments/ 
 │   ├── experiment_1/ # First experiment 
-│   │   ├── docker-compose.yml 
-│   │   ├── .env # Environment variables for this experiment 
 │   │   ├── README.md # Documentation for experiment 1 
+│   │   ├── run.sh # Script to run the experiment - starts needed services
 │   │   └── (other files related to experiment 1) 
 │   ├── experiment_2/ # Second experiment 
-│   │   ├── docker-compose.yml 
-│   │   ├── .env # Environment variables for this experiment 
 │   │   ├── README.md # Documentation for experiment 2 
+│   │   ├── run.sh # Script to run the experiment - starts needed services
 │   │   └── (other files related to experiment 2) 
 │   └── (other experiments)
 
