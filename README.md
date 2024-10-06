@@ -6,7 +6,6 @@ This folder contains a collection of services and experiments organized to facil
 
 ``` bash
 root/ 
-- init.sh # Create common things e.g. the experiments network - run once when you begin - remember to chmod +x it
 ├── services/ 
 │   ├── database-postgresql/ # Database service (e.g., PostgreSQL)
 │   ├── reporting-superset/ # Data and visualization (e.g., Apache Superset)
@@ -21,6 +20,10 @@ root/
 │   │   └── (other files related to experiment 1) 
 │   ├── experiment_2/ # Second experiment 
 │   └── (other experiments)
+│
+│ # Create common things e.g. the experiments network
+│ # Run once when you begin - remember to chmod +x it
+- init.sh 
 ```
 
 ## Services Directory
@@ -53,6 +56,8 @@ git clone https://github.com/plindman/experiments-apache-superset apache-superse
 cd <service folder>
 chmod +x run.sh
 ./run.sh
+
+# Clone/create your experiments in the experiments part
 
 ```
 
