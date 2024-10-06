@@ -31,11 +31,6 @@ root/
 - services/database-postgresql. See https://github.com/plindman/experiments-database-postgresql
 - services/reporting-superset. See see https://github.com/plindman/experiments-apache-superset
 
-## Network structure - service ports 
-
-- Apache Superset: 8088
-- Experiments Postgres: 5432
-
 ## Usage
 
 ```bash
@@ -60,6 +55,24 @@ chmod +x run.sh
 # Clone/create your experiments in the experiments part
 
 ```
+## `experiments` Network
+
+- Apache Superset: 8088
+- Experiments Postgres: 5432
+
+### Accessing a Service
+
+You can connect to services using different connection strings depending on your environment.
+
+Container in the Same Docker Network: use the service's container name and network alias in the connection string.
+
+```bash
+postgresql://username:password@experiments-postgres:5432/dbname
+```
+
+On Mac/Windows: Use the **host.docker.internal** hostname, which allows Docker containers to communicate with services on the host machine.
+On Linux: You will need to use the **host's IP address**. Typically, this is 172.17.0.1, but it may vary depending on your Docker setup. You can verify this by running `ip addr` on your host machine.
+
 
 ## Contributing
 
