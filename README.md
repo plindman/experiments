@@ -43,8 +43,8 @@ chmod +x init.sh
 
 # Change into services folder and clone the services you want to use
 cd ./services
-git clone https://github.com/plindman/experiments-database-postgresql database-postgresql
-git clone https://github.com/plindman/experiments-apache-superset apache-superset
+git clone https://github.com/plindman/experiments-database-postgresql
+git clone https://github.com/plindman/experiments-apache-superset
 
 # Check the README.md for details on how to use the service
 # Run the service using the run.sh script
