@@ -71,6 +71,7 @@ postgresql://username:password@experiments-postgres:5432/dbname
 ```
 
 On Mac/Windows: Use the **host.docker.internal** hostname, which allows Docker containers to communicate with services on the host machine.
+
 On Linux: You will need to use the **host's IP address**. Typically, this is 172.17.0.1, but it may vary depending on your Docker setup. You can verify this by running `ip addr` on your host machine.
 
 
