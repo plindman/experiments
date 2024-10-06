@@ -39,7 +39,7 @@ root/
 git clone https://github.com/plindman/experiments
 
 # Run init.sh to prepare common things
-chmox +x init.sh
+chmod +x init.sh
 ./init.sh
 
 # Change into services folder and clone the services you want to use
