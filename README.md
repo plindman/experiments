@@ -29,11 +29,6 @@ root/
 
 ## Services Directory
 
-- Common files every service has:
-
-  - README.md - documentation
-  - run.sh - script to start the service
-
 - services/database-postgresql. See https://github.com/plindman/experiments-database-postgresql
 - services/reporting-superset. See see https://github.com/plindman/experiments-apache-superset
 
@@ -47,11 +42,13 @@ git clone https://github.com/plindman/experiments
 chmox +x init.sh
 ./init.sh
 
-# Change into services and clone the services you want to use
-cd services
+# Change into services folder and clone the services you want to use
+cd ./services
 git clone https://github.com/plindman/experiments-database-postgresql database-postgresql
 git clone https://github.com/plindman/experiments-apache-superset apache-superset
 
+# Check the README.md for details on how to use the service
+# Run the service using the run.sh script
 cd <service folder>
 chmod +x run.sh
 ./run.sh
