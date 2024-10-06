@@ -21,6 +21,7 @@ root/
 │   │   └── (other files related to experiment 1) 
 │   ├── experiment_2/ # Second experiment 
 │   └── (other experiments)
+```
 
 ## Services Directory
 
