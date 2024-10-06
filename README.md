@@ -29,7 +29,7 @@ root/
 
 ## Services Directory
 
-- Common files:
+- Common files every service has:
 
   - README.md - documentation
   - run.sh - script to start the service
@@ -39,31 +39,24 @@ root/
 
 ## Usage
 
-1. **Clone the Repository**: Clone this repository to your local machine.
-    ```bash
-    git clone <repository-url>
-    ```
+```bash
+# Clone this repository to your local machine.
+git clone https://github.com/plindman/experiments
 
-2. **Navigate to the Service or Experiment Directory**: Change into the relevant directory where the service or experiment resides.
-    ```bash
-    cd services/database
-    ```
+# Run init.sh to prepare common things
+chmox +x init.sh
+./init.sh
 
-3. **Start the Service**: Use Docker Compose to start the service. If you are starting the database, ensure it is not already running.
-    ```bash
-    docker-compose up -d
-    ```
+# Change into services and clone the services you want to use
+cd services
+git clone https://github.com/plindman/experiments-database-postgresql database-postgresql
+git clone https://github.com/plindman/experiments-apache-superset apache-superset
 
-4. **Run Experiments**: Similarly, navigate to the experiment folder and run the Docker Compose file.
-    ```bash
-    cd ../experiments/experiment_1
-    docker-compose up -d
-    ```
+cd <service folder>
+chmod +x run.sh
+./run.sh
 
-5. **Check Running Containers**: You can check the status of your containers with:
-    ```bash
-    docker ps
-    ```
+```
 
 ## Contributing
 
@@ -81,5 +74,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 - [Docker](https://www.docker.com/) - For containerization.
 - [Docker Compose](https://docs.docker.com/compose/) - For managing multi-container Docker applications.
-
-
+- [PostgreSQL](https://www.postgresql.org/) - a powerful, open source object-relational database system.
+- [Apache Superset](https://superset.apache.org/) - For data exploration and visualization.
