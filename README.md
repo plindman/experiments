@@ -2,10 +2,16 @@
 
 This folder contains a collection of services and experiments organized to facilitate the development and testing of various applications. The structure allows for the reuse of services like databases and logging across different experiments while keeping each experiment isolated.
 
+## Network structure
+
+- Apache Superset: 8088
+- Experiments Postgres: 5432
+
 ## Folder Structure
 
 ``` bash
 root/ 
+- init.sh # Create common things e.g. the experiments network - run once when you begin - remember to chmod +x it
 ├── services/ 
 │   ├── database/ # Database service (e.g., PostgreSQL) 
 │   │   ├── docker-compose.yml │ │ ├── .env # Environment variables for the database 
