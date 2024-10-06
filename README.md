@@ -13,53 +13,29 @@ This folder contains a collection of services and experiments organized to facil
 root/ 
 - init.sh # Create common things e.g. the experiments network - run once when you begin - remember to chmod +x it
 ├── services/ 
-│   ├── database-postgresql/ # Database service (e.g., PostgreSQL) see https://github.com/plindman/experiments-database-postgresql
+│   ├── database-postgresql/ # Database service (e.g., PostgreSQL)
+│   ├── reporting-superset/ # Data and visualization (e.g., Apache Superset)
+│   ├── [service_name]/ # 
 │   │   ├── README.md # Documentation
 │   │   ├── run.sh # Script to run the service
-│   │   └── (other files related to the database service) 
-│   ├── reporting-superset/ # Data and visualization (e.g., Apache Superset) see https://github.com/plindman/experiments-apache-superset
-│   │   ├── README.md # Documentation 
-│   │   ├── run.sh # Script to run the service
-│   │   └── (other files related to the logging service) 
+│   │   └── (other files related to the service) 
 └── experiments/ 
 │   ├── experiment_1/ # First experiment 
 │   │   ├── README.md # Documentation for experiment 1 
 │   │   ├── run.sh # Script to run the experiment - starts needed services
 │   │   └── (other files related to experiment 1) 
 │   ├── experiment_2/ # Second experiment 
-│   │   ├── README.md # Documentation for experiment 2 
-│   │   ├── run.sh # Script to run the experiment - starts needed services
-│   │   └── (other files related to experiment 2) 
 │   └── (other experiments)
 
 ## Services Directory
 
-- **`services/database/`**: Contains the Docker configuration and documentation for the database service.
-  - **`docker-compose.yml`**: The Docker Compose file to run the database service.
-  - **`.env`**: Environment variables required for the database.
-  - **`README.md`**: Documentation on how to use and configure the database service.
+- Common files:
 
-- **`services/logging/`**: Contains the Docker configuration and documentation for the logging service.
-  - **`docker-compose.yml`**: The Docker Compose file to run the logging service.
-  - **`.env`**: Environment variables required for the logging service.
-  - **`README.md`**: Documentation on how to use and configure the logging service.
+  - README.md - documentation
+  - run.sh - script to start the service
 
-- **`services/shared/`**: Contains shared services used across experiments (e.g., message brokers).
-  - **`docker-compose.yml`**: The Docker Compose file for shared services.
-  - **`.env`**: Environment variables for shared services.
-  - **`README.md`**: Documentation for shared services.
-
-## Experiments Directory
-
-- **`experiments/experiment_1/`**: Contains files for the first experiment.
-  - **`docker-compose.yml`**: The Docker Compose file to run this experiment.
-  - **`.env`**: Environment variables specific to this experiment.
-  - **`README.md`**: Documentation on how to run and configure the first experiment.
-
-- **`experiments/experiment_2/`**: Contains files for the second experiment.
-  - **`docker-compose.yml`**: The Docker Compose file to run this experiment.
-  - **`.env`**: Environment variables specific to this experiment.
-  - **`README.md`**: Documentation on how to run and configure the second experiment.
+- services/database-postgresql. See https://github.com/plindman/experiments-database-postgresql
+- services/reporting-superset. See see https://github.com/plindman/experiments-apache-superset
 
 ## Usage
 
