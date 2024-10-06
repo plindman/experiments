@@ -20,6 +20,7 @@ This document provides instructions on setting up the root Git repository and in
 
     ```bash
     git init
+    git branch -m main
     ```
 
 3. **Create a `.gitignore` File**: To exclude the `services` and `experiments` folders from the root Git repository, create a `.gitignore` file.
