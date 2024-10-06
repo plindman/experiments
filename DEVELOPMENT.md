@@ -20,6 +20,8 @@ This document provides instructions on setting up the root Git repository and in
 
     ```bash
     git init
+    
+    # Rename branch if needed master->main
     git branch -m main
     ```
 
