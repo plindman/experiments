@@ -26,7 +26,7 @@ This document provides instructions on setting up the root Git repository and in
 - Run the following commands
 
     ```bash
-    # Initialize the repository
+    # Initialize the repository note! this requires git 2.28 or newer
     git init -b main
 
     # Create a `.gitignore` file 
